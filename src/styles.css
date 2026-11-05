@@ -1,0 +1,135 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-panel: var(--panel);
+  --color-edge: var(--edge);
+  --color-dim: var(--dim);
+  --color-volt: var(--volt);
+  --color-plasma: var(--plasma);
+  --color-coral: var(--coral);
+}
+
+@theme {
+  --font-display: "Russo One", sans-serif;
+  --font-body: "Source Sans 3", sans-serif;
+  --font-mono: "Source Sans 3", sans-serif;
+}
+
+:root {
+  --radius: 0.25rem;
+  --background: oklch(0.14 0 0);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.2 0 0);
+  --card-foreground: oklch(0.96 0 0);
+  --popover: oklch(0.2 0 0);
+  --popover-foreground: oklch(0.96 0 0);
+  --primary: var(--volt);
+  --primary-foreground: oklch(0.2 0 0);
+  --secondary: oklch(0.34 0 0);
+  --secondary-foreground: oklch(0.96 0 0);
+  --muted: oklch(0.34 0 0);
+  --muted-foreground: oklch(0.8 0 0);
+  --accent: var(--plasma);
+  --accent-foreground: oklch(0.2 0 0);
+  --destructive: oklch(0.62 0.2 27);
+  --destructive-foreground: oklch(0.97 0 0);
+  --border: oklch(0.05 0 0);
+  --input: oklch(0.18 0 0);
+  --ring: var(--volt);
+  --panel: oklch(0.2 0 0);
+  --edge: oklch(0.05 0 0);
+  --dim: oklch(0.8 0 0);
+  --volt: oklch(0.92 0 0);
+  --plasma: oklch(0.75 0 0);
+  --coral: oklch(0.65 0 0);
+  --khaki: oklch(0.78 0 0);
+  --studs: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Crect x='9' y='9' width='14' height='14' rx='2' fill='black' fill-opacity='.05'/%3E%3Cpath d='M9 22V11a2 2 0 0 1 2-2h11' fill='none' stroke='white' stroke-opacity='.07' stroke-width='2'/%3E%3Cpath d='M23 10v11a2 2 0 0 1-2 2H10' fill='none' stroke='black' stroke-opacity='.18' stroke-width='2'/%3E%3C/svg%3E");
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    background-image: var(--studs);
+    background-size: 32px 32px;
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-rise {
+  animation: rise 0.6s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+/* Plastic brick block: thick dark outline + hard bottom ledge */
+@utility brick {
+  border-width: 3px;
+  border-color: var(--edge);
+  box-shadow: 0 6px 0 0 var(--edge);
+  background-image: var(--studs);
+    background-size: 32px 32px;
+}
+
+/* Chunky press-down button */
+@utility brick-btn {
+  border: 3px solid var(--edge);
+  box-shadow: 0 4px 0 0 var(--edge);
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+  transition: transform 80ms, box-shadow 80ms;
+  &:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 0 var(--edge);
+  }
+}
