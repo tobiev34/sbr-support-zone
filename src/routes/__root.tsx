@@ -11,7 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 import { Toaster } from "sonner";
 
-import sbrLogo from "@/assets/2d618ad5d4e0e88a1ca4bba5ad7bcdb9.webp";
+import sbrLogo from "@/assets/abc123.png";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
