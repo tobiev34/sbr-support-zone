@@ -1,5 +1,4 @@
-import weaponBat from "@/assets/first-weapon-bat.png.asset.json";
-
+import weaponBat from "@/assets/e67775d4-9413-4a2f-9f8e-c4d69f878851.png";
 export const team = [
   { name: "RUNITBACK", role: "OWNER" },
   { name: "NEXI", role: "OWNER" },
