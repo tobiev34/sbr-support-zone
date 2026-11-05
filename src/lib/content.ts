@@ -19,6 +19,6 @@ export const updates: Update[] = [
     date: "nov 03",
     title: "First weapon in game",
     body: "A first look at the very first weapon coming to SBR: a spiked, burlap-wrapped bat — with a little bird riding along.",
-    image: weaponBat.url,
+    image: weaponBat,
   },
 ];
