@@ -70,7 +70,7 @@ export function TicketForm({
   const [files, setFiles] = useState<{ file: File; url: string }[]>([]);
   const [drag, setDrag] = useState(false);
   const totalSize = files.reduce((s, p) => s + p.file.size, 0);
-  const tooBig = files.length > 5 || totalSize > 10 * 1024 * 1024;
+  const tooBig = files.length > 5 || totalSize > 20 * 1024 * 1024;
 
   function addFiles(list: FileList) {
     const picked = Array.from(list).filter(
@@ -94,7 +94,7 @@ export function TicketForm({
     const kind = accent === "coral" ? "Report" : accent === "plasma" ? "Support" : "Ban appeal";
     const proof = files.map((p) => p.file);
     if (tooBig) {
-      toast.error("Proof is too big: max 5 files and 10 MB in total.");
+      toast.error("Proof is too big: max 5 files and 20 MB in total.");
       return;
     }
     const body = new FormData();
