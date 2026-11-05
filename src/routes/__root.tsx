@@ -11,8 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 import { Toaster } from "sonner";
 
-import sbrLogo from "@/assets/sbr-logo.png.asset.json";
-
+import sbrLogo from "@/assets/abc123.png";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -150,7 +149,7 @@ function SiteHeader() {
 
         <Link to="/" className="flex items-center gap-3 justify-self-center">
           <img
-            src={sbrLogo.url}
+            src={sbrLogo}
             alt="SBR Studios logo"
             className="size-10 rounded-lg"
           />
