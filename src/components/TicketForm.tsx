@@ -186,7 +186,7 @@ export function TicketForm({
             className={`flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-[3px] border-dashed px-4 py-8 text-center transition-colors ${drag ? "border-foreground bg-panel" : "border-edge bg-background hover:border-dim"}`}
           >
             <span className="font-display text-lg uppercase">Drop photos or videos here</span>
-            <span className="text-sm text-dim">or click to choose · up to 5 files, 10 MB total</span>
+            <span className="text-sm text-dim">or click to choose · up to 5 files, 20 MB total</span>
             <input
               type="file"
               multiple
@@ -226,7 +226,7 @@ export function TicketForm({
                 ))}
               </div>
               <div className={`mt-2 text-xs ${tooBig ? "text-destructive" : "text-dim"}`}>
-                {files.length}/5 files · {(totalSize / 1024 / 1024).toFixed(1)} / 10 MB
+                {files.length}/5 files · {(totalSize / 1024 / 1024).toFixed(1)} / 20 MB
               </div>
             </>
           )}
