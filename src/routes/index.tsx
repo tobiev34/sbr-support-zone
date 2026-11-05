@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import sbrBanner from "@/assets/sbr-logo-banner.webp.asset.json";
-import { team, updates } from "@/lib/content";
+import sbrBanner from "@/assets/2d618ad5d4e0e88a1ca4bba5ad7bcdb9.webp";import { team, updates } from "@/lib/content";
 
 export const Route = createFileRoute("/")({
   head: () => ({
