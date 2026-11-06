@@ -5,8 +5,8 @@ export const Route = createFileRoute("/support")({
   head: () => ({
     meta: [
       { title: "Contact Support — SBR Studio" },
-      { name: "description", content: "Billing, account, or bug problems? Open a ticket with SBR support." },
-      { property: "og:title", content: "Contact Support — SBR Studio" },
+      { name: "description", content: "choose what role you want and see if you pass ;) ? Open a ticket with SBR support." },
+      { property: "og:title", content: "role apply — SBR Studio" },
       { property: "og:description", content: "Reach a real SBR support agent." },
     ],
   }),
@@ -17,7 +17,7 @@ function SupportPage() {
   return (
     <main className="relative mx-auto grid max-w-6xl gap-10 px-6 pt-16 pb-28 lg:grid-cols-[0.8fr_1.2fr]">
       <PageIntro eyebrow="02 · Contact support" title="Talk to SBR support" accent="plasma">
-        Billing, account recovery, or a bug that won't quit — reach a real SBR agent.
+       apply for roles to get better in game view — reach a real SBR agent.
       </PageIntro>
       <TicketForm
         accent="plasma"
@@ -26,7 +26,7 @@ function SupportPage() {
         fields={[
           { name: "username", label: "Username", placeholder: "Your in-game name" },
           { name: "email", label: "Email", type: "email", placeholder: "you@example.com" },
-          { name: "topic", label: "Topic", type: "select", options: ["Account", "Billing", "Bug", "Other"] },
+          { name: "topic", label: "Topic", type: "select", options: ["content C", "tester", "lead tester", "dc staff", "in-game-mod", "in-game-dev",] },
           { name: "subject", label: "Subject", placeholder: "Short summary" },
           { name: "message", label: "Message", type: "textarea", placeholder: "How can we help?" },
         ]}
