@@ -2,7 +2,7 @@ import weaponBat from "@/assets/e67775d4-9413-4a2f-9f8e-c4d69f878851.png";
 export const team = [
   { name: "RUNITBACK", role: "OWNER" },
   { name: "NEXI", role: "OWNER" },
-  { name: "MYSOUL", role: "COMUNITY LEADER" },
+  { name: "MYSOUL", role: "DISCORD MANAGER" },
   { name: "ALBERT", role: "DC LEADER" },
   { name: "Null", role: "STAFF MANAGER" },
   { name: "starlyn", role: "most active XD" },
